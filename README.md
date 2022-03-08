@@ -1,1 +1,1 @@
-# Processamento-Gr-fico-2022
+# Processamento-Gráfico-2022
