@@ -1,0 +1,3 @@
+2) O que são primitivas gráficas? Como fazemos o armazenamento dos vértices na OpenGL? 
+	As primitivas gráficas são os elementos mais simples que podemos criar no OpenGL, por exemplo, um ponto, linhas, triângulos, retângulos, círculos etc. A partir do uso delas podemos construir figuras mais complexas.
+	Fazemos o armazenamento através de buffers, utilizando o modo VBO, VAO ou EBO.

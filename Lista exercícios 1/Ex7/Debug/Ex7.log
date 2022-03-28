@@ -1,0 +1,4 @@
+﻿  Source.cpp
+C:\Users\mayara.lopes\Documents\Aula\Processamento gráfico\2022\Repositorio github\Processamento-Grafico-2022\Lista exercícios 1\HelloTriangle-withShaderClass\Ex7\Source.cpp(33,25): warning C4305: 'inicializando': truncamento de 'double' para 'float'
+C:\Users\mayara.lopes\Documents\Aula\Processamento gráfico\2022\Repositorio github\Processamento-Grafico-2022\Lista exercícios 1\HelloTriangle-withShaderClass\Ex7\Source.cpp(164,21): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+  Ex7.vcxproj -> C:\Users\mayara.lopes\Documents\Aula\Processamento gráfico\2022\Repositorio github\Processamento-Grafico-2022\Lista exercícios 1\HelloTriangle-withShaderClass\Debug\Ex7.exe

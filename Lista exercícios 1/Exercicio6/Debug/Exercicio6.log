@@ -1,0 +1,3 @@
+﻿  Source.cpp
+C:\Users\mayara.lopes\Documents\Aula\Processamento gráfico\2022\Repositorio github\Processamento-Grafico-2022\Lista exercícios 1\HelloTriangle-withShaderClass\Exercicio6\Source.cpp(33,25): warning C4305: 'inicializando': truncamento de 'double' para 'float'
+  Exercicio6.vcxproj -> C:\Users\mayara.lopes\Documents\Aula\Processamento gráfico\2022\Repositorio github\Processamento-Grafico-2022\Lista exercícios 1\HelloTriangle-withShaderClass\Debug\Exercicio6.exe
