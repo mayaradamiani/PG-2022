@@ -1,0 +1,2 @@
+﻿  glad.c
+C:\Users\mayara.lopes\Documents\Aula\Processamento gráfico\2022\Repositorio github\Processamento-Grafico-2022\Lista exercícios 2\HelloTriangle-withShaderClass\HelloTriangle\glad.c(24,10): fatal error C1083: Não é possível abrir arquivo incluir: 'glad/glad.h': No such file or directory
