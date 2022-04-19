@@ -38,9 +38,8 @@ const GLuint WIDTH = 800, HEIGHT = 600;
 const int nPoints = 100 + 1 + 1;
 const float Pi = 3.1419;
 const float radius = 30;
-
-enum Movement { Top, Down, Left, Right, Stop };
-static Movement mov = Stop;
+enum Position { t, d, l, r, s };
+static Position position = s;
 
 int main()
 {
@@ -52,6 +51,7 @@ int main()
 	glfwMakeContextCurrent(window);
 
 	// Fazendo o registro da função de callback para a janela GLFW
+
 	glfwSetKeyCallback(window, key_callback);
 
 	// GLAD: carrega todos os ponteiros das funções da OpenGL
@@ -111,22 +111,22 @@ int main()
 
 		glm::mat4 model = glm::mat4(1); // Matriz identidade
 
-		switch (mov) {
-		case Left:
+		switch (position) {
+		case l:
 			if (x > radius)
-				x -= 0.1f;
+				x -= 0.5f;
 			break;
-		case Right:
+		case r:
 			if (x < width - radius)
-				x += 0.1f;
+				x += 0.5f;
 			break;
-		case Top:
+		case t:
 			if (y < height - radius)
-				y += 0.2f;
+				y += 0.5f;
 			break;
-		case Down:
+		case d:
 			if (y > radius)
-				y -= 0.2f;
+				y -= 0.5f;
 			break;
 		default:
 			break;
@@ -134,12 +134,10 @@ int main()
 
 		model = glm::translate(model, glm::vec3(x, y, 0));
 		shader.setMat4("model", glm::value_ptr(model));
-
-		glUniform4f(colorLoc, 1.0f, 0.4f, 0.4f, 1.0f);
+		glUniform4f(colorLoc, 1.0f, 0.0f, 0.0f, 1.0f);
 		glDrawArrays(GL_TRIANGLE_FAN, 0, nPoints);
 
 		glViewport(0, 0, width, height);
-
 		glBindVertexArray(0);
 
 		// Troca os buffers da tela
@@ -161,20 +159,20 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 		glfwSetWindowShouldClose(window, GL_TRUE);
 
 	if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS) {
-		mov = Top;
+		position = t;
 	}
 	else if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS) {
-		mov = Down;
+		position = d;
 	}
 	else if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS) {
-		mov = Right;
+		position = r;
 	}
 	else if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS) {
-		mov = Left;
+		position = l;
 	}
 	
 	else {
-		mov = Stop;
+		position = s;
 	}
 }
 

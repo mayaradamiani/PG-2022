@@ -127,11 +127,12 @@ int main()
 
 		glBindVertexArray(VAO);
 
+
 		for (int i = 1; i < 4; i++) {
 			glm::mat4 model = glm::mat4(1); // Matriz identidade
-			model = glm::translate(model, glm::vec3(i * 100.0, i * 150.0, 0));
+			model = glm::translate(model, glm::vec3(i * 150.0, i * 150.0, 0));
 			model = glm::rotate(model, (float)5 / i * (float)glfwGetTime() /*  glm::radians(45.0f) */, glm::vec3(0, 0, 1));
-			model = glm::scale(model, glm::vec3(i / 4.0 + 0.5, i / 4.0 + 0.5, 1.0));
+			model = glm::scale(model, glm::vec3(i/5.0 , i/5.0 , 1.0));
 			GLint modelLoc = glGetUniformLocation(shader.ID, "model");
 			glUniformMatrix4fv(modelLoc, 1, FALSE, glm::value_ptr(model));
 

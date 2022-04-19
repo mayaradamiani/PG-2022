@@ -1,3 +1,0 @@
-﻿  Source.cpp
-C:\Users\mayara.lopes\Documents\Aula\Processamento gráfico\2022\Repositorio github\Processamento-Grafico-2022\Lista exercícios 1\HelloTriangle-withShaderClass\Ex8\Source.cpp(215,2): warning C4305: 'inicializando': truncamento de 'double' para 'GLfloat'
-  Ex8.vcxproj -> C:\Users\mayara.lopes\Documents\Aula\Processamento gráfico\2022\Repositorio github\Processamento-Grafico-2022\Lista exercícios 1\HelloTriangle-withShaderClass\Debug\Ex8.exe

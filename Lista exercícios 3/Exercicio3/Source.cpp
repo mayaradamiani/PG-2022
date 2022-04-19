@@ -37,7 +37,9 @@ const GLuint WIDTH = 800, HEIGHT = 600;
 // Número de vértices que terá em volta do ponto central + 1 + o ponto central
 const int nPoints = 100 + 1 + 1;
 const float Pi = 3.1419;
-const float radius = 30;
+const float radius = 50;
+float positionX = 0.05;
+float positionY = 0.05;
 
 int main()
 {
@@ -86,8 +88,6 @@ int main()
 
 	float x = 400;
 	float y = 300;
-	float positionX = 0.05;
-	float positionY = 0.05;
 
 	// Loop da aplicação - "game loop"
 	while (!glfwWindowShouldClose(window))
@@ -99,16 +99,15 @@ int main()
 		glClearColor(0.8f, 0.8f, 0.8f, 1.0f); // cor de fundo
 		glClear(GL_COLOR_BUFFER_BIT);
 
-		glLineWidth(5);
-		glPointSize(5);
+		glLineWidth(15);
+		glPointSize(15);
 
 		glBindVertexArray(VAO);
 
 		// Definindo as dimensões da viewport com as mesmas dimensões da janela da aplicação
 		int width, height;
 		glfwGetFramebufferSize(window, &width, &height);
-
-		glm::mat4 model = glm::mat4(1); // Matriz identidade
+		glm::mat4 model = glm::mat4(1); 
 
 		if (x < radius || x > width - radius) {
 			positionX = -positionX;
@@ -125,10 +124,8 @@ int main()
 
 		shader.setMat4("model", glm::value_ptr(model));
 
-		glUniform4f(colorLoc, 1.0f, 1.0f, 0.0f, 1.0f);
-
+		glUniform4f(colorLoc, 0.0f, 1.0f, 1.0f, 0.0f);
 		glDrawArrays(GL_TRIANGLE_FAN, 0, nPoints);
-
 		glViewport(0, 0, width, height);
 
 		glBindVertexArray(0);

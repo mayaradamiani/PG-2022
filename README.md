@@ -16,3 +16,7 @@ Dentro do setupGeometry e a variável nvertices foram comentados o trecho de có
 ## Lista 2
 
 Todos os exercíos foram realizados em um único arquivo fonte. Dentro do while e na definição do glm ortho foram comentados o trecho de código necessário pra execução.
+
+## Lista 3
+
+Todos os exercíos foram realizados em um único arquivo fonte.
